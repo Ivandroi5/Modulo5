@@ -1,0 +1,196 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.presentation.ui.HomeFragment">
+
+    <FrameLayout
+        android:id="@+id/frameLayout3"
+        android:layout_width="375dp"
+        android:layout_height="262dp"
+        android:background="@drawable/background_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/text_initial_home"
+        android:layout_width="45dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="200dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/inicio"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_profile_home"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="48dp"
+        android:contentDescription="@string/avatar_profile"
+        android:src="@drawable/avatar_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/radius" />
+
+    <TextView
+        android:id="@+id/text_welcome_home"
+        android:layout_width="101dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/hola_amanda"
+        android:textColor="#80FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_balance_home"
+        android:layout_width="119dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/balance_total"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textBalanceHome"
+        android:layout_width="162dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/dinero_total"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/notification_home"
+        android:layout_width="24dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="230dp"
+        android:contentDescription="@string/avatar_profile"
+        android:src="@drawable/notification_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/radius" />
+
+    <Button
+        android:id="@+id/travel_to_send_money"
+        android:layout_width="165dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/green"
+        android:drawableLeft="@drawable/send_icon_black"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/enviar_dinero"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout3"
+        app:shapeAppearanceOverlay="@style/radiusbutton" />
+
+    <Button
+        android:id="@+id/travel_to_receive_money"
+        android:layout_width="167dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="@color/celeste_wallet"
+        android:drawableLeft="@drawable/path"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/ingresar_dinero"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout3"
+        app:shapeAppearanceOverlay="@style/radiusbutton" />
+
+    <TextView
+        android:id="@+id/textViewLastTrans"
+        android:layout_width="155dp"
+        android:layout_height="24dp"
+
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="205dp"
+
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/ultimas_transacciones"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/travel_to_send_money" />
+
+    <ImageView
+        android:id="@+id/imageNoTransaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="89dp"
+        android:layout_marginEnd="137dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLastTrans"
+        app:srcCompat="@drawable/empty_illustration"
+
+        />
+
+    <TextView
+        android:id="@+id/textNoTransaction"
+        android:layout_width="184dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/no_hay_transacciones_registradas"
+        android:textColor="@color/blackopacity"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageNoTransaction" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTransaction"
+        tools:listitem="@layout/transaction_item"
+        android:layout_width="330dp"
+        android:layout_height="315dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLastTrans"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

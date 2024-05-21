@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="345dp"
+    android:layout_height="309dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/Image_contact1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/avatar_profile"
+        android:src="@drawable/yara"
+        app:shapeAppearanceOverlay="@style/radius"
+        />
+
+    <TextView
+        android:layout_width="85dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/yara_khalil"
+        android:textSize="14sp" />
+    <TextView
+        android:layout_width="91dp"
+        android:layout_height="18dp"
+        android:textColor="@color/blacksuperopacity"
+        android:text="@string/oct_14_10_24_am"
+        android:fontFamily="@font/jua_regular"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="38dp"
+        />
+
+    <TextView
+        android:id="@+id/balance1"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/_15_00"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_contact2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="74dp"
+        android:contentDescription="@string/sara_ibrahim"
+        android:src="@drawable/sara"
+        app:shapeAppearanceOverlay="@style/radius" />
+
+    <TextView
+        android:layout_width="85dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="74dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/sara_ibrahim"
+        android:textSize="14sp" />
+    <TextView
+        android:layout_width="91dp"
+        android:layout_height="18dp"
+        android:textColor="@color/blacksuperopacity"
+        android:text="@string/oct_12_02_13_pm"
+        android:fontFamily="@font/jua_regular"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="96dp"
+        />
+
+    <TextView
+        android:id="@+id/balance2"
+        android:layout_width="61dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="285dp"
+        android:layout_marginTop="82dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/_20_50"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_contact3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="132dp"
+        android:contentDescription="@string/avatar_profile"
+        android:src="@drawable/ahmad"
+        app:shapeAppearanceOverlay="@style/radius" />
+
+    <TextView
+        android:layout_width="89dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="132dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/ahmad_ibrahim"
+        android:textSize="14sp" />
+    <TextView
+        android:layout_width="91dp"
+        android:layout_height="18dp"
+        android:textColor="@color/blacksuperopacity"
+        android:text="@string/oct_11_01_19_am"
+        android:fontFamily="@font/jua_regular"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="154dp"
+        />
+
+    <TextView
+        android:id="@+id/balance3"
+        android:layout_width="59dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="140dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/_12_40"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_contact4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="190dp"
+        android:contentDescription="@string/avatar_profile"
+        android:src="@drawable/reem"
+        app:shapeAppearanceOverlay="@style/radius" />
+
+    <TextView
+        android:layout_width="85dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="190dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/reem_khaled"
+        android:textSize="14sp" />
+    <TextView
+        android:layout_width="91dp"
+        android:layout_height="18dp"
+        android:textColor="@color/blacksuperopacity"
+        android:text="@string/oct_07_09_10_pm"
+        android:fontFamily="@font/jua_regular"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="212dp"
+        />
+
+    <TextView
+        android:id="@+id/balance4"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="198dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/_21_30"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_contact5"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="248dp"
+        android:contentDescription="@string/avatar_profile"
+        android:src="@drawable/hiba"
+        app:shapeAppearanceOverlay="@style/radius" />
+
+    <TextView
+        android:layout_width="85dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="248dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/hiba_saleh"
+        android:textSize="14sp" />
+    <TextView
+        android:layout_width="91dp"
+        android:layout_height="18dp"
+        android:textColor="@color/blacksuperopacity"
+        android:text="@string/oct_04_05_45_am"
+        android:fontFamily="@font/jua_regular"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="270dp"
+        />
+
+    <TextView
+        android:id="@+id/balance5"
+        android:layout_width="61dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="285dp"
+        android:layout_marginTop="256dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/_09_00"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+</FrameLayout>
