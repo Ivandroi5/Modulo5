@@ -7,10 +7,11 @@
     android:layout_height="match_parent"
     tools:context= ".profile.presentation.ui.ProfilePageFragment">
 
-    <com.google.android.material.textfield.TextInputLayout
+    <Button
         android:id="@+id/textInputLayout1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="345dp"
+        android:layout_height="64dp"
+        android:gravity="center_vertical"
         android:layout_marginStart="15dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="15dp"
@@ -18,26 +19,21 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout2"
-        app:shapeAppearanceOverlay="@style/radiusbutton">
+        app:shapeAppearanceOverlay="@style/radiusbutton"
+        android:backgroundTint="@color/whiteyellow"
+        android:drawableLeft="@drawable/icon_profile"
+        android:drawableRight="@drawable/arrow_icon"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/mi_informaci_n"
+        android:textColor="@color/black"
+        android:textSize="14sp">
+    </Button>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="345dp"
-            android:layout_height="64dp"
-            android:background="@color/whiteyellow"
-            android:drawableLeft="@drawable/icon_profile"
-            android:drawableRight="@drawable/arrow_icon"
-            android:fontFamily="@font/jua_regular"
-            android:text="@string/mi_informaci_n"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-
-            />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
+    <Button
         android:id="@+id/textInputLayout2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="345dp"
+        android:layout_height="64dp"
+        android:gravity="center_vertical"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
@@ -45,26 +41,23 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout1"
-        app:shapeAppearanceOverlay="@style/radiusbutton">
+        app:shapeAppearanceOverlay="@style/radiusbutton"
+        android:backgroundTint="@color/whiteyellow"
+        android:drawableLeft="@drawable/card_icon"
+        android:drawableRight="@drawable/arrow_icon"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/mis_tarjetas"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="345dp"
-            android:layout_height="64dp"
-            android:background="@color/whiteyellow"
-            android:drawableLeft="@drawable/card_icon"
-            android:drawableRight="@drawable/arrow_icon"
-            android:fontFamily="@font/jua_regular"
-            android:text="@string/mis_tarjetas"
-            android:textColor="@color/black"
-            android:textSize="14sp"
 
-            />
-    </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
+    <Button
         android:id="@+id/textInputLayout3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="345dp"
+        android:layout_height="64dp"
+        android:gravity="center_vertical"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
@@ -72,25 +65,21 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
-        app:shapeAppearanceOverlay="@style/radiusbutton">
+        app:shapeAppearanceOverlay="@style/radiusbutton"
+        android:backgroundTint="@color/whiteyellow"
+        android:drawableRight="@drawable/arrow_icon"
+        android:drawableLeft="@drawable/settings_icon"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/opciones"
+        android:textColor="@color/black"
+        android:textSize="14sp"/>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="345dp"
-            android:layout_height="64dp"
-            android:background="@color/whiteyellow"
-            android:drawableRight="@drawable/arrow_icon"
-            android:drawableLeft="@drawable/settings_icon"
-            android:fontFamily="@font/jua_regular"
-            android:text="@string/opciones"
-            android:textColor="@color/black"
-            android:textSize="14sp"
 
-            />
-    </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Button
+        android:layout_width="345dp"
+        android:layout_height="64dp"
+        android:gravity="center_vertical"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
@@ -98,21 +87,14 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
-        app:shapeAppearanceOverlay="@style/radiusbutton">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="345dp"
-            android:layout_height="64dp"
-            android:background="@color/whiteyellow"
-            android:drawableRight="@drawable/arrow_icon"
-            android:drawableLeft="@drawable/help_icon"
-            android:fontFamily="@font/jua_regular"
-            android:text="@string/centro_de_ayuda"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-
-            />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:shapeAppearanceOverlay="@style/radiusbutton"
+        android:backgroundTint="@color/whiteyellow"
+        android:drawableRight="@drawable/arrow_icon"
+        android:drawableLeft="@drawable/help_icon"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/centro_de_ayuda"
+        android:textColor="@color/black"
+        android:textSize="14sp"/>
 
     <FrameLayout
         android:id="@+id/frameLayout2"

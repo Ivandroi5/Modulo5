@@ -47,7 +47,7 @@
 
     <TextView
         android:id="@+id/text_welcome_home"
-        android:layout_width="101dp"
+        android:layout_width="wrap_content"
         android:layout_height="21dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="125dp"
@@ -80,7 +80,7 @@
 
     <TextView
         android:id="@+id/textBalanceHome"
-        android:layout_width="162dp"
+        android:layout_width="wrap_content"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="200dp"
@@ -182,15 +182,15 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewTransaction"
-        tools:listitem="@layout/transaction_item"
         android:layout_width="330dp"
         android:layout_height="315dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewLastTrans"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/transaction_item" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

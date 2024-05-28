@@ -21,4 +21,26 @@ class LoginPageViewModel: ViewModel() {
         _navigateToSingUpPage.value = false
 
     }
+    private val _navigateToHome = MutableLiveData<Boolean>()
+
+
+    val navigateToHome: LiveData<Boolean>
+        get() = _navigateToHome
+
+    init {
+        _navigateToHome.value = false
+    }
+
+    fun navigateToHome() {
+        _navigateToHome.value = true
+    }
+
+    fun onHomeNavigated() {
+        _navigateToHome.value = false
+    }
+    fun validateCredentials(email: String, password: String): Boolean {
+        val registeredUsers = LoginUser.dataLoginUsers
+        val user = registeredUsers.find { it.email == email && it.password == password }
+        return user != null
+    }
 }

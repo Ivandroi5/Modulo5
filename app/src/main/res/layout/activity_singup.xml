@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/singup_activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundloginpage"
@@ -27,21 +27,116 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewName"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/nombre"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputName"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="69dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:textColorHint="@color/blackopacity" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="315dp"
+            android:layout_height="49dp"
+            android:fontFamily="@font/jua_regular"
+            android:hint="@string/ingresar_nombre"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textViewLastName"
+        android:layout_width="49dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/apellido"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayoutLastName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputName"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutLastName"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="29dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputName"
+        android:textColorHint="@color/blackopacity"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="315dp"
+            android:layout_height="49dp"
+            android:fontFamily="@font/jua_regular"
+            android:hint="@string/ingresar_apellido"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textViewEmail"
         android:layout_width="34dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="314dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/jua_regular"
         android:text="@string/email"
         android:textColor="@color/black"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress3"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutLastName"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="33dp"
+        android:background="@color/white"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/blackopacity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutLastName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jua_regular"
+            android:hint="@string/ingresar_tu_email"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 
     <TextView
@@ -50,7 +145,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="270dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/jua_regular"
         android:text="@string/contrasena"
@@ -60,55 +154,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress3" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/editTextTextEmailAddress3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="30dp"
-        android:background="@color/white"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/jua_regular"
-            android:text="@string/ingresar_tu_email"
-            android:textColor="@color/blackopacity"
-            android:textSize="14sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintVertical_bias="1.0" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/editTextTextPassword3"
-        android:layout_width="match_parent"
+        android:layout_width="315dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="33dp"
-        android:layout_marginEnd="30dp"
 
         android:background="@color/white"
         android:ems="10"
         app:endIconMode="password_toggle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress3">
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
+        android:textColorHint="@color/blackopacity">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="315dp"
             android:layout_height="49dp"
             android:fontFamily="@font/jua_regular"
-            android:text="@string/ingresa_tu_contrasena"
-            android:textColor="@color/blackopacity"
+            android:hint="@string/ingresa_tu_contrasena"
             android:textSize="14sp"
 
             />
@@ -154,93 +221,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/create_account_final" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
-        android:layout_width="315dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="69dp"
-        android:layout_marginEnd="30dp"
-        android:background="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="315dp"
-            android:layout_height="49dp"
-            android:fontFamily="@font/jua_regular"
-            android:text="@string/ingresar_nombre"
-            android:textColor="@color/blackopacity" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:textColor="@color/black"
-        android:id="@+id/textView4"
-        android:layout_width="48dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="299dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/jua_regular"
-        android:text="@string/nombre"
-        android:textSize="14dp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:textColor="@color/black"
-        android:layout_width="49dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="296dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/jua_regular"
-        android:text="@string/apellido"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
-        android:layout_width="315dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginEnd="30dp"
-        android:background="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="315dp"
-            android:layout_height="49dp"
-            android:fontFamily="@font/jua_regular"
-            android:text="@string/ingresar_apellido"
-            android:textColor="@color/blackopacity"
-
-            />
-    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="143dp"
+        android:layout_width="wrap_content"
         android:layout_height="21dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="202dp"
-        android:textColor="@color/black"
-
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/jua_regular"
+
         android:text="@string/reingresar_contrase_a"
+        android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3" />
 
@@ -248,22 +242,23 @@
         android:id="@+id/textInputLayout3"
         android:layout_width="315dp"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         android:layout_marginStart="30dp"
         android:layout_marginTop="33dp"
-        android:layout_marginEnd="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:endIconMode="password_toggle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3"
-        app:endIconMode="password_toggle"
+        android:textColorHint="@color/blackopacity"
+
         >
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="315dp"
             android:layout_height="49dp"
             android:fontFamily="@font/jua_regular"
-            android:text="@string/reingresar_contrasena"
-            android:textColor="@color/blackopacity"
-            android:textSize="14sp" />
+            android:hint="@string/reingresar_contrasena"
+            android:textSize="14sp"
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
 

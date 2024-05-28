@@ -16,19 +16,29 @@
         <activity
             android:name=".home.presentation.ui.HomeNavigationActivity"
             android:exported="false"
-            android:theme="@style/Theme.AlkeWalletM5" />
+            android:theme="@style/Theme.AlkeWalletM5"
+            android:launchMode="singleInstance"
+            />
         <activity
             android:name=".singup.presentation.ui.SingupActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:launchMode="singleInstance"
+            />
         <activity
             android:name=".login.presentation.ui.LoginPageActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:launchMode="singleInstance"
+            />
         <activity
             android:name=".login.presentation.ui.IntroAccountActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:launchMode="singleInstance"
+            />
         <activity
             android:name=".login.presentation.ui.MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:launchMode="singleInstance"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

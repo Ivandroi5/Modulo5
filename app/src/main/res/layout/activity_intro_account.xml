@@ -77,22 +77,20 @@
 
     <TextView
         android:id="@+id/user_access_link"
-        android:layout_width="104dp"
-        android:layout_height="21dp"
-
-        android:layout_marginStart="136dp"
-        android:layout_marginBottom="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
 
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/jua_regular"
         android:text="@string/user_access"
+
+
         android:textAlignment="center"
-
-
         android:textColor="@color/celeste_wallet"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
 
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/create_account_button" />
 

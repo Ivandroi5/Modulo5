@@ -6,10 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.alkewalletm5.R
 import com.example.alkewalletm5.databinding.ActivitySingupBinding
-import com.example.alkewalletm5.home.presentation.ui.HomeFragment
-import com.example.alkewalletm5.home.presentation.ui.HomeNavigationActivity
 import com.example.alkewalletm5.login.presentation.ui.LoginPageActivity
 import com.example.alkewalletm5.login.presentation.viewmodel.SingUpViewModel
 
@@ -33,19 +30,23 @@ class SingupActivity : AppCompatActivity() {
             }
         })
 
-        viewModel.navigateToHome.observe(this, Observer { navigate ->
-            if (navigate) {
-                startActivity(Intent(this, HomeNavigationActivity::class.java))
-                viewModel.onHomeNavigated()
+        viewModel.createAccount.observe(this, Observer { create ->
+            if (create) {
+                val name = binding.textInputLayoutLastName.editText?.text.toString()
+                val lastName = binding.textInputLayoutLastName.editText?.text.toString()
+                val email = binding.editTextTextEmailAddress.editText?.text.toString()
+                val password = binding.editTextTextPassword3.editText?.text.toString()
+
+                viewModel.createAccount(name, lastName, email, password )
+            }
+            binding.createAccountFinal.setOnClickListener{
+                viewModel.navigateToLoginPage()
             }
         })
 
         binding.loginAccountSingup.setOnClickListener {
             viewModel.navigateToLoginPage()
         }
-
-        binding.createAccountFinal.setOnClickListener {
-            viewModel.navigateToHome()
-        }
     }
 }
+
