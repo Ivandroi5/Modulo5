@@ -3,12 +3,11 @@ package com.example.alkewalletm5.login.presentation.ui
 import LoginUser
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.alkewalletm5.R
 import com.example.alkewalletm5.databinding.ActivityLoginPageBinding
 import com.example.alkewalletm5.home.presentation.ui.HomeNavigationActivity
 import com.example.alkewalletm5.login.presentation.viewmodel.LoginPageViewModel
@@ -20,27 +19,39 @@ class LoginPageActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_login_page)
         binding = ActivityLoginPageBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        // Recuperar el objeto User pasado desde la actividad de registro
-        val user = intent.getParcelableExtra<LoginUser>("user")
 
         viewModel = ViewModelProvider(this).get(LoginPageViewModel::class.java)
+
+        // Recibir datos del usuario recién creado desde SingupActivity
+        val newUser = intent.getParcelableExtra<LoginUser>("newUser")
+
+        // Validar el usuario recién creado
+        if (newUser != null) {
+            if (viewModel.validateCredentials(newUser.email, newUser.password)) {
+                // Inicio de sesión exitoso
+                Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
+                // Aquí puedes realizar acciones adicionales después de un inicio de sesión exitoso
+            } else {
+                // Inicio de sesión fallido
+                Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
+            }
+        }
 
         binding.loginAccountButton.setOnClickListener {
             val email = binding.enterEmailLogin.text.toString()
             val password = binding.enterPasswordLogin.text.toString()
 
             if (viewModel.validateCredentials(email, password)) {
+                // Inicio de sesión exitoso
                 Toast.makeText(this, "Accediendo...", Toast.LENGTH_SHORT).show()
-
                 startActivity(Intent(this, HomeNavigationActivity::class.java))
                 viewModel.onHomeNavigated()
-
-
             } else {
+                // Inicio de sesión fallido
+                Log.i("Loginnewuser for else", newUser.toString())
+
                 Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
             }
         }

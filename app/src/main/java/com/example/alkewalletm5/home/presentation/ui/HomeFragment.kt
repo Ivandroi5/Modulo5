@@ -1,5 +1,6 @@
 package com.example.alkewalletm5.home.presentation.ui
 
+import LoginUser
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,16 +10,23 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.alkewalletm5.R
 import com.example.alkewalletm5.databinding.FragmentHomeBinding
 import com.example.alkewalletm5.home.data.local.entities.Transaction
+import com.example.alkewalletm5.home.presentation.ui.adapters.ProfileAdapter
 import com.example.alkewalletm5.home.presentation.ui.adapters.TransactionAdapter
-import com.google.android.material.imageview.ShapeableImageView
+import com.example.alkewalletm5.profile.data.local.entities.Profile
 
-
+/**
+ * Fragmento para la página principal del Home del usuario
+ */
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
 
+    /**
+     * Método para crear la vista del fragmento usa acciones de navigation graph
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,7 +34,7 @@ class HomeFragment : Fragment() {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         val btnNavSend: Button = binding.travelToSendMoney
         val btnNavReceive: Button = binding.travelToReceiveMoney
-        val imgNavProfile: ShapeableImageView = binding.imageProfileHome
+
 
         btnNavSend.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_sendMoneyFragment2)
@@ -34,20 +42,27 @@ class HomeFragment : Fragment() {
         btnNavReceive.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_requestMoneyFragment2)
         }
-        imgNavProfile.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_profilePageFragment2)
-        }
+
         binding.recyclerViewTransaction.layoutManager = LinearLayoutManager(requireContext())
+        binding.frameLayoutInfoProfile.layoutManager = LinearLayoutManager(requireContext())
 
-        initAdapter()
+       // val userId = 1
+        //val user = LoginUser.dataLoginUsers.find { it.userId == userId }
 
-        // Retorna la raíz del binding
+
+        initAdapterTransaction()
+        initAdapterProfile()
+
         return binding.root
     }
 
-    fun initAdapter() {
+    /**
+     * Métodos para inicializar los adapters de transacciones y perfiles
+     */
+    fun initAdapterTransaction() {
         val transactionAdapter = TransactionAdapter()
         binding.recyclerViewTransaction.adapter = transactionAdapter
+
 
         transactionAdapter.transaction = Transaction.datatransaction
         //transactionAdapter.transaction = Transaction.dataTransactionEmpty
@@ -62,6 +77,28 @@ class HomeFragment : Fragment() {
         } else {
             binding.imageNoTransaction.visibility = View.GONE
             binding.textNoTransaction.visibility = View.GONE
+        }
+    }
+
+    fun initAdapterProfile() {
+        val profileAdapter = ProfileAdapter()
+        binding.frameLayoutInfoProfile.adapter = profileAdapter
+
+        profileAdapter.profiles = Profile.dataProfiles
+        profileAdapter.onItemClickListener = { profile ->
+            Toast.makeText(
+                requireContext(), "Navegando hacia el perfil de ${profile.name}",
+                Toast.LENGTH_SHORT
+            ).show()
+            findNavController().navigate(R.id.action_homeFragment_to_profilePageFragment2)
+
+        }
+        if (profileAdapter.profiles.isEmpty()) {
+            binding.noProfile.visibility = View.VISIBLE
+
+        } else {
+            binding.noProfile.visibility = View.GONE
+
         }
     }
 }

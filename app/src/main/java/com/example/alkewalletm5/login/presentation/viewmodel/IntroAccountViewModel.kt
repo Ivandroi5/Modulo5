@@ -3,10 +3,15 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 
-
+/**
+ * Uso de viewModel para manejar la futura navegación entre pantallas
+ */
 class IntroActivityViewModel : ViewModel() {
 
-    //Para ir a la página de registrar cuenta
+    /**
+     * Para ir a la página de registrar cuenta con un booleano
+     */
+
 
     private val _navigateToSingUpPage = MutableLiveData<Boolean>()
     val navigateToSingUpPage: LiveData<Boolean>
@@ -24,8 +29,9 @@ class IntroActivityViewModel : ViewModel() {
 
     }
 
-    //Para ir a la pagina de acceso a usuarios
-
+    /**
+     * Para ir a la página de acceder a cuenta con un booleano
+     */
     private val _navigateToLoginPage = MutableLiveData<Boolean>()
     val navigateToLoginPage: LiveData<Boolean>
         get() = _navigateToLoginPage

@@ -9,6 +9,10 @@ import com.example.alkewalletm5.R
 import com.example.alkewalletm5.databinding.ActivityMainBinding
 import com.example.alkewalletm5.login.presentation.viewmodel.MainActivityViewModel
 
+/**
+ * Actividad que se muestra al iniciar la aplicación es simplemente una imagen que escucha en su contenido
+ * un click para navegar a la siguiente actividad
+ */
 class MainActivity : AppCompatActivity() {
 
     private lateinit var viewModel: MainActivityViewModel

@@ -6,6 +6,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.alkewalletm5.R
 
+/**
+ * ViewModel para la pantalla de registro quue navega hacia la pantalla de acceso
+ */
 class SingUpViewModel : ViewModel() {
     private val _navigateToLoginPage = MutableLiveData<Boolean>()
     val navigateToLoginPage: LiveData<Boolean>
@@ -28,14 +31,22 @@ class SingUpViewModel : ViewModel() {
         _navigateToLoginPage.value = false
     }
 
-    fun createAccount(name: String, lastName: String, email: String, password: String) {
-        // Aquí puedes realizar la lógica para crear la cuenta con los datos proporcionados
-        // Por ejemplo:
-         val newUser = LoginUser(name, lastName, email, password,
+    /**
+     * Función para traer los daotos escuchados en los campos de registro y asignarle variables nuevas
+     * y finalmente agregarlis a la lista de usuarios
+     * @param userId es el id del usuario creado para facilitar su movimiento en la app
+     * @param balance es el saldo inicial del usuario
+     * @param imageProfile es la imagen de perfil por defecto
+     */
+    fun createAccount(name: String, lastName: String, email: String, password: String): LoginUser {
+
+         val newUser = LoginUser(userId = 0, name = name, lastName = lastName, email = email, password = password,
              balance =100.00, imageProfile = R.drawable.default_profile_image)
         LoginUser.dataLoginUsers.add(newUser)
 
         // Después de crear la cuenta, navega a la página de inicio de sesión
         _createAccount.value = true
+        _navigateToLoginPage.value = true
+        return newUser
     }
 }

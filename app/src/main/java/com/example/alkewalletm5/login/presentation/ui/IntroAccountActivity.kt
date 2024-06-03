@@ -11,6 +11,11 @@ import com.example.alkewalletm5.databinding.ActivityIntroAccountBinding
 import com.example.alkewalletm5.login.presentation.viewmodel.IntroActivityViewModel
 import com.example.alkewalletm5.singup.presentation.ui.SingupActivity
 
+/**
+ * Actividad para la intro de la cuenta donde se elige si se crea una cuenta nueva o se accede
+ * can una cuenta existente
+ * Tambien lleva la navegacion hacia dichas actividades
+ */
 class IntroAccountActivity : AppCompatActivity() {
     private lateinit var binding: ActivityIntroAccountBinding
 
@@ -18,8 +23,7 @@ class IntroAccountActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_intro_account)
+
         binding = ActivityIntroAccountBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

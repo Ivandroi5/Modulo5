@@ -9,6 +9,9 @@ import androidx.navigation.fragment.findNavController
 import com.example.alkewalletm5.R
 import com.example.alkewalletm5.databinding.FragmentSendMoneyBinding
 
+/**
+ * Fragment para enviar dinero llevala navegación para volver al Home
+ */
 
 class SendMoneyFragment : Fragment() {
 

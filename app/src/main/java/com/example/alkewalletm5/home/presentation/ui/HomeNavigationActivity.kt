@@ -14,6 +14,9 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.alkewalletm5.R
 import com.example.alkewalletm5.databinding.ActivityHomeNavigationBinding
 
+/**
+ * Actividad que maneja el navigation graph con ello todos los fragmentos que lo componen
+ */
 class HomeNavigationActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration

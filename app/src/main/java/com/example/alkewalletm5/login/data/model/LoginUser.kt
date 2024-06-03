@@ -2,7 +2,12 @@ import android.os.Parcel
 import android.os.Parcelable
 import com.example.alkewalletm5.R
 
+/**
+ * Clase que representa a un usuario de la aplicación se agragó el modelo de datosy constructores
+ * para pasar los datos a la vista
+ */
 data class LoginUser(
+    var userId: Int = 0,
     val name: String = "",
     val lastName: String = "",
     val email: String = "",
@@ -11,6 +16,7 @@ data class LoginUser(
     var imageProfile: Int = 0
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
+        parcel.readInt(),
         parcel.readString() ?: "",
         parcel.readString() ?: "",
         parcel.readString() ?: "",
@@ -20,6 +26,7 @@ data class LoginUser(
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeInt(userId)
         parcel.writeString(name)
         parcel.writeString(lastName)
         parcel.writeString(email)
@@ -42,9 +49,10 @@ data class LoginUser(
         }
 
 
+
         val dataLoginUsers = mutableListOf<LoginUser>(
             LoginUser(
-                name = "Arturo", lastName = "Pendragon", email = "arturo@gmail.com",
+                userId = 0, name = "Arturo", lastName = "Pendragon", email = "arturo@gmail.com",
                 password = "mesaredonda", balance = 1000.0, imageProfile = R.drawable.arturo),
 
         )

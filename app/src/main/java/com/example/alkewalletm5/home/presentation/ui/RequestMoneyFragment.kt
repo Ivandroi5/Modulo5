@@ -11,7 +11,9 @@ import androidx.navigation.fragment.findNavController
 import com.example.alkewalletm5.R
 import com.example.alkewalletm5.databinding.FragmentRequestMoneyBinding
 
-
+/**
+ * Fragmento para solicitar dinero lleva la navegación para volver al Home
+ */
 class RequestMoneyFragment : Fragment() {
     private lateinit var binding: FragmentRequestMoneyBinding
 
@@ -32,7 +34,7 @@ class RequestMoneyFragment : Fragment() {
             findNavController().navigate(R.id.action_requestMoneyFragment2_to_homeFragment)
         }
 
-        // Inflate the layout for this fragment
+
         return binding.root
     }
 

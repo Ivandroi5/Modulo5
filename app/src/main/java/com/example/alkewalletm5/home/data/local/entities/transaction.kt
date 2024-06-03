@@ -1,7 +1,14 @@
 package com.example.alkewalletm5.home.data.local.entities
 
 import com.example.alkewalletm5.R
-
+/**
+ * Data class para pintar el recyclerView de las transacciones en la pantalla de Home
+ *  @param id Identificador de la transacción
+ *  @param imageContactTransaction Imagen del contacto
+ *  @param nameContactTransaction Nombre del contacto
+ *  @param dateTransaction Fecha de la transacción
+ *  @param amountTransaction Monto de la transacción
+ */
 data class Transaction (
     val id: String,
     var imageContactTransaction: Int = 0,
@@ -9,6 +16,7 @@ data class Transaction (
     val dateTransaction: String,
     val amountTransaction: String,
     ) {
+    //
     companion object {
         val datatransaction = mutableListOf<Transaction>(
         Transaction("1",R.drawable.yara, "Yara Kalil",

@@ -11,14 +11,14 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_to_profilePageFragment2"
-            app:destination="@id/profilePageFragment2" />
-        <action
             android:id="@+id/action_homeFragment_to_sendMoneyFragment2"
             app:destination="@id/sendMoneyFragment2" />
         <action
             android:id="@+id/action_homeFragment_to_requestMoneyFragment2"
             app:destination="@id/requestMoneyFragment2" />
+        <action
+            android:id="@+id/action_homeFragment_to_profilePageFragment2"
+            app:destination="@id/profilePageFragment2" />
     </fragment>
     <fragment
         android:id="@+id/sendMoneyFragment2"
