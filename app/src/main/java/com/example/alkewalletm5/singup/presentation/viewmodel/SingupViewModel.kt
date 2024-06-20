@@ -1,6 +1,7 @@
 package com.example.alkewalletm5.login.presentation.viewmodel
 
-import LoginUser
+import android.app.Application
+import com.example.alkewalletm5.data.model.LoginUser
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -9,7 +10,7 @@ import com.example.alkewalletm5.R
 /**
  * ViewModel para la pantalla de registro quue navega hacia la pantalla de acceso
  */
-class SingUpViewModel : ViewModel() {
+class SingupViewModel : ViewModel() {
     private val _navigateToLoginPage = MutableLiveData<Boolean>()
     val navigateToLoginPage: LiveData<Boolean>
         get() = _navigateToLoginPage

@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alkewalletm5.databinding.FragmentHomeInfoProfileItemBinding
-import com.example.alkewalletm5.profile.data.local.entities.Profile
+import com.example.alkewalletm5.data.local.entities.Profile
 
 private val TAG = ProfileAdapter::class.java.simpleName
 

@@ -1,4 +1,4 @@
-package com.example.alkewalletm5.profile.data.local.entities
+package com.example.alkewalletm5.data.local.entities
 
 import com.example.alkewalletm5.R
 

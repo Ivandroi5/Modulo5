@@ -1,6 +1,6 @@
 package com.example.alkewalletm5.login.presentation.ui
 
-import LoginUser
+import com.example.alkewalletm5.data.model.LoginUser
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -17,6 +17,7 @@ class LoginPageActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginPageBinding
     private lateinit var viewModel: LoginPageViewModel
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginPageBinding.inflate(layoutInflater)
@@ -26,6 +27,12 @@ class LoginPageActivity : AppCompatActivity() {
 
         // Recibir datos del usuario recién creado desde SingupActivity
         val newUser = intent.getParcelableExtra<LoginUser>("newUser")
+
+        binding.loginAccountButton.setOnClickListener {
+            val email = binding.enterEmailLogin.text.toString()
+            val password = binding.enterPasswordLogin.text.toString()
+        }
+
 
         // Validar el usuario recién creado
         if (newUser != null) {
@@ -67,4 +74,6 @@ class LoginPageActivity : AppCompatActivity() {
             viewModel.navigateToSingUpPage()
         }
     }
+
+
 }

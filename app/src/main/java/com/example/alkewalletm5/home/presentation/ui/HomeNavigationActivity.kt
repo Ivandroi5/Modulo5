@@ -20,7 +20,6 @@ import com.example.alkewalletm5.databinding.ActivityHomeNavigationBinding
 class HomeNavigationActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityHomeNavigationBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

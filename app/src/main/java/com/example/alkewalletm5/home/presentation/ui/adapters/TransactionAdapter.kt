@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alkewalletm5.databinding.TransactionItemBinding
-import com.example.alkewalletm5.home.data.local.entities.Transaction
+import com.example.alkewalletm5.data.local.entities.Transaction
 
 private val TAG = TransactionAdapter::class.java.simpleName
 

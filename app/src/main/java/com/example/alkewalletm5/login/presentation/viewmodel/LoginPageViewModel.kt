@@ -3,6 +3,8 @@ package com.example.alkewalletm5.login.presentation.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.alkewalletm5.data.model.LoginUser
+
 /**
  * Uso de viewModel para manejar la futura navegación entre pantallas hacia la página de registro y
  * el Home
